@@ -92,6 +92,27 @@
   color: #fff;
 }
 
+#video_grid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  flex-flow: 1;
+  background-color: var(--main-dark);
+
+}
+video{
+  height: 300px;
+  width: 400px;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  transform: rotateY(180deg);
+  object-fit: cover;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180);
+
+}
+
 @media (max-width: 700px) {
   #show_chat {
     display: flex;
