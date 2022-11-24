@@ -47,21 +47,20 @@
   flex-direction: column;
 }
 
-.message{
-  display:flex;
+.message {
+  display: flex;
   flex-direction: column;
 }
-.message > b{
-  color:#eeeeee;
-  display:flex;
+.message > b {
+  color: #eeeeee;
+  display: flex;
   align-items: center;
   text-transform: capitalize;
 }
-.message > b > i{
-  margin-right:0.7rem;
+.message > b > i {
+  margin-right: 0.7rem;
   font: size 1.5rem;
 }
-
 
 .main_message_container {
   padding: 1rem;
@@ -92,25 +91,23 @@
   color: #fff;
 }
 
-#video_grid{
+#video_grid {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  flex-flow: 1;
   background-color: var(--main-dark);
-
 }
-video{
+video {
   height: 300px;
-  width: 400px;
   border-radius: 1rem;
   margin: 0.5rem;
-  transform: rotateY(180deg);
+  width: 400px;
   object-fit: cover;
+  transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180);
-
+  -moz-transform: rotateY(180deg);
 }
 
 @media (max-width: 700px) {
