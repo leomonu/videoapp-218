@@ -9,7 +9,8 @@ const  user = prompt("Enter Your Name")
 const myVideo = document.createElement("video")
 myVideo.muted = true
 var myStream
-navigator.mediaDevices.getDisplayMedia({
+navigator.mediaDevices.getUserMedia({
+
   audio:true,video:true
 })
 .then((stream)=>{
