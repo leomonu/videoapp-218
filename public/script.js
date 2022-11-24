@@ -14,8 +14,9 @@ navigator.mediaDevices.getDisplayMedia({
 })
 .then((stream)=>{
   myStream = stream
+  addVideoStream(myVideo,stream)
 })
-function aaddVideoStream(video,stream){
+function addVideoStream(video,stream){
   video.srcObject = stream
   video.addEventListener("loadedmetadata",()=>{
     video.play()
