@@ -68,7 +68,8 @@ $("#send").click(function(){
   });
 
   $("#mute_button").click(function(){
-    const enable = myStream.getAudioTracks([])
+    const enable = myStream.getAudioTracks()[0.].enable
+    console.log("what is ebale", enable)
   })
   $("#stop_video").click(function(){
     
