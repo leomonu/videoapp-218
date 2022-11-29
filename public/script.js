@@ -70,6 +70,20 @@ $("#send").click(function(){
   $("#mute_button").click(function(){
     const enable = myStream.getAudioTracks()[0.].enabled
     console.log("what is ebale", enable)
+    if (enabled){
+      myStream.getAudioTracks()[0.].enabled = false
+      html=`<i class="fas fa-microphone-slash"></i>`
+      $("#mute_button").toggleClass("backgournd_red")
+      $("#mute_button").html(html)
+
+    }
+    else{
+      myStream.getAudioTracks()[0.].enabled = true
+      html=`<i class="fas fa-microphone"></i>`
+      $("#mute_button").toggleClass("backgournd_red")
+      $("#mute_button").html(html)
+
+    }
   })
   $("#stop_video").click(function(){
     
