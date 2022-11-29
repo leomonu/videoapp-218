@@ -15,6 +15,7 @@ navigator.mediaDevices.getUserMedia({
 })
 .then((stream)=>{
   myStream = stream
+  console.log(stream)
   addVideoStream(myVideo,stream)
   socket.on("user-connnected",(userId)=>{
     connectToNewUser(userId,stream)
@@ -44,7 +45,10 @@ function addVideoStream(video,stream){
 }
 
 
+
+
 $(function () {
+
     $("#show_chat").click(function () {
       $(".left-window").css("display", "none");
       $(".right-window").css("display", "block");
@@ -63,6 +67,13 @@ $("#send").click(function(){
 })
   });
 
+  $("#mute_button").click(function(){
+    const enable = myStream.getAudioTracks([])
+  })
+  $("#stop_video").click(function(){
+    
+  })
+
   peer.on("open",(id)=>{
     socket.emit("join-room",ROOM_ID,id,user)
   })
@@ -77,6 +88,8 @@ $("#send").click(function(){
         <span>${message}</span>
       </div>
     `)
+
   })
+
 
   // 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
